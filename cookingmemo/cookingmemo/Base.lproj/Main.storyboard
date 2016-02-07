@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q6n-PJ-mEU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="JKG-M_3.ttf">
+            <string>JK-Gothic-M</string>
+            <string>JK-Gothic-M</string>
+            <string>JK-Gothic-M</string>
+            <string>JK-Gothic-M</string>
+            <string>JK-Gothic-M</string>
+            <string>JK-Gothic-M</string>
+            <string>JK-Gothic-M</string>
+            <string>JK-Gothic-M</string>
+            <string>JK-Gothic-M</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="cookingmemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0T0-kL-E83"/>
+                        <viewControllerLayoutGuide type="bottom" id="Joz-he-foD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="245" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="n1p-RK-8No">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="245" id="Hog-Li-N4S">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="245"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hog-Li-N4S" id="nvI-kT-odM">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="244.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem image="名称未設定-13.gif" id="fC7-DP-iRc"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="96B-Q0-Ocq">
+                        <barButtonItem key="rightBarButtonItem" image="post.gif" id="5hg-Vu-fh9">
+                            <connections>
+                                <action selector="postMemo" destination="vXZ-lx-hvc" id="gSg-9S-g4E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="table" destination="n1p-RK-8No" id="dri-bM-f6r"/>
+                        <segue destination="QxS-Fz-obL" kind="modal" identifier="modalNewRecip" id="4W1-Ix-eeH"/>
+                        <segue destination="Ngy-ki-SCG" kind="push" identifier="showTweetVC" id="rjt-mo-Ibg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="366"/>
+        </scene>
+        <!--Recipe View Controller-->
+        <scene sceneID="Bbr-O5-c5v">
+            <objects>
+                <viewController id="Ngy-ki-SCG" customClass="RecipeViewController" customModule="cookingmemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ekA-Sn-QUD"/>
+                        <viewControllerLayoutGuide type="bottom" id="J7l-Pt-U1Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pYC-vO-DOf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EqB-yE-dBP">
+                                <rect key="frame" x="10" y="402" width="300" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.66666666669999997" green="0.50091352259999999" blue="0.25144907560000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VcX-GI-1w9">
+                                <rect key="frame" x="10" y="245" width="300" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.66666666669999997" green="0.50091352259999999" blue="0.25144907560000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="材料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzH-j7-8Mv">
+                                <rect key="frame" x="20" y="223" width="38" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="JK-Gothic-M" family="JK Gothic M" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dnP-gL-kaS">
+                                <rect key="frame" x="40" y="87" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作り方" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufe-Hl-fvN">
+                                <rect key="frame" x="20" y="373" width="57" height="21"/>
+                                <fontDescription key="fontDescription" name="JK-Gothic-M" family="JK Gothic M" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AcO-xZ-ouG">
+                        <barButtonItem key="rightBarButtonItem" title="編集" id="qCE-1o-uHz">
+                            <connections>
+                                <segue destination="rwx-K6-PwG" kind="push" identifier="editVC" id="oAH-5L-6YY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="foodstuffTextView" destination="VcX-GI-1w9" id="KA7-h8-3yo"/>
+                        <outlet property="imageFromCameraRoll" destination="dnP-gL-kaS" id="BM5-lY-sOM"/>
+                        <outlet property="recipeTextVIew" destination="EqB-yE-dBP" id="kpP-jZ-mh4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ioh-eh-v7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982" y="366"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="bbc-v8-NcX">
+            <objects>
+                <viewController id="rwx-K6-PwG" customClass="EditViewController" customModule="cookingmemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h2z-Ag-CdT"/>
+                        <viewControllerLayoutGuide type="bottom" id="jDX-3P-QKK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LxX-Jt-HYj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="材料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfO-KG-URN">
+                                <rect key="frame" x="20" y="222" width="34" height="21"/>
+                                <fontDescription key="fontDescription" name="JK-Gothic-M" family="JK Gothic M" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cmO-S6-UFK">
+                                <rect key="frame" x="7" y="251" width="307" height="126"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.66666666669999997" green="0.50091352259999999" blue="0.25144907560000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ugy-LJ-AvF">
+                                <rect key="frame" x="13" y="402" width="307" height="220"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.66666666669999997" green="0.50091352259999999" blue="0.25144907560000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作り方" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2M-dH-8dc">
+                                <rect key="frame" x="20" y="379" width="51" height="21"/>
+                                <fontDescription key="fontDescription" name="JK-Gothic-M" family="JK Gothic M" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jLw-vj-9VM">
+                                <rect key="frame" x="40" y="86" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="REh-6w-t7s">
+                        <barButtonItem key="rightBarButtonItem" title="完了" id="qcH-fR-JPp">
+                            <connections>
+                                <action selector="saveRecip:" destination="rwx-K6-PwG" id="4d7-xo-4cD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="foodstuffTextView" destination="cmO-S6-UFK" id="BWR-cg-38e"/>
+                        <outlet property="imageFromCameraRoll" destination="jLw-vj-9VM" id="oCD-wW-4Iq"/>
+                        <outlet property="recipeTextVIew" destination="ugy-LJ-AvF" id="aAY-Lc-CpK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wxg-uB-Lca" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1410" y="366"/>
+        </scene>
+        <!--New Recip View Controller-->
+        <scene sceneID="HW8-qI-kon">
+            <objects>
+                <viewController id="ada-D3-itN" customClass="NewRecipViewController" customModule="cookingmemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W6p-Js-rhH"/>
+                        <viewControllerLayoutGuide type="bottom" id="m0j-TI-IjA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DEy-z3-6Zv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a30-wm-oiH">
+                                <rect key="frame" x="33" y="79" width="255" height="30"/>
+                                <color key="textColor" red="0.66666666669999997" green="0.50091352259999999" blue="0.25144907560000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="JK-Gothic-M" family="JK Gothic M" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fc9-Yg-FJE">
+                                <rect key="frame" x="5" y="454" width="310" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.66666666669999997" green="0.50091352259999999" blue="0.25144907560000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="材料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXQ-N7-d8Q">
+                                <rect key="frame" x="20" y="285" width="34" height="21"/>
+                                <fontDescription key="fontDescription" name="JK-Gothic-M" family="JK Gothic M" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作り方" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEl-b3-JcP">
+                                <rect key="frame" x="20" y="425" width="51" height="21"/>
+                                <fontDescription key="fontDescription" name="JK-Gothic-M" family="JK Gothic M" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxE-aT-nJT">
+                                <rect key="frame" x="221" y="257" width="94" height="35"/>
+                                <state key="normal" title="CameraRoll">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressCameraRoll:" destination="ada-D3-itN" eventType="touchUpInside" id="I1S-pb-Bda"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FEx-8Z-1ju">
+                                <rect key="frame" x="33" y="126" width="240" height="128"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3BK-tn-dls">
+                                <rect key="frame" x="10" y="305" width="300" height="123"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.66666666669999997" green="0.50091352259999999" blue="0.25144907560000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="JK-Gothic-M" family="JK Gothic M" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Yf-l9-1Bg">
+                        <barButtonItem key="leftBarButtonItem" title="戻る" id="1hm-h8-cCt">
+                            <connections>
+                                <action selector="tapBackButton:" destination="ada-D3-itN" id="nRL-G1-y0x"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="LS1-NY-4KY">
+                            <connections>
+                                <action selector="saveRecip:" destination="ada-D3-itN" id="oA6-Ca-jJk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageFromCameraRoll" destination="FEx-8Z-1ju" id="Gdt-ra-nUN"/>
+                        <outlet property="recipe" destination="Fc9-Yg-FJE" id="fUc-mB-zLs"/>
+                        <outlet property="titleTextField" destination="a30-wm-oiH" id="iCz-Sj-BBH"/>
+                        <outlet property="titleTextView" destination="3BK-tn-dls" id="49W-jY-qga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="65D-df-5NE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982" y="1060"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="k8e-Tb-Who">
+            <objects>
+                <viewController id="q6n-PJ-mEU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="znc-UQ-Zf8"/>
+                        <viewControllerLayoutGuide type="bottom" id="TUC-tc-gcx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yt2-eK-3aE" customClass="StartTableViewCell" customModule="cookingmemo" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="014_gcr_l.png" translatesAutoresizingMaskIntoConstraints="NO" id="HAC-lS-Jwb">
+                                <rect key="frame" x="-7" y="0.0" width="120" height="120"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="014_gcr_l.png" translatesAutoresizingMaskIntoConstraints="NO" id="h4Q-to-9l6">
+                                <rect key="frame" x="-7" y="448" width="120" height="120"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="014_gcr_l.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lse-Rw-NxL">
+                                <rect key="frame" x="232" y="120" width="120" height="120"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="014_gcr_l.png" translatesAutoresizingMaskIntoConstraints="NO" id="lcE-6b-HpD">
+                                <rect key="frame" x="113" y="0.0" width="120" height="120"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="014_gcr_l.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZoE-RO-lk0">
+                                <rect key="frame" x="232" y="0.0" width="120" height="120"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="014_gcr_l.png" translatesAutoresizingMaskIntoConstraints="NO" id="zXM-YI-AUR">
+                                <rect key="frame" x="113" y="120" width="120" height="120"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="014_gcr_l.png" translatesAutoresizingMaskIntoConstraints="NO" id="JOO-Va-syD">
+                                <rect key="frame" x="-7" y="120" width="120" height="120"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="014_gcr_l.png" translatesAutoresizingMaskIntoConstraints="NO" id="hb8-4R-GbZ">
+                                <rect key="frame" x="232" y="239" width="120" height="120"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="014_gcr_l.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Ou-EA-OFQ">
+                                <rect key="frame" x="-7" y="239" width="120" height="120"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="014_gcr_l.png" translatesAutoresizingMaskIntoConstraints="NO" id="yB9-QL-olO">
+                                <rect key="frame" x="113" y="239" width="120" height="120"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="014_gcr_l.png" translatesAutoresizingMaskIntoConstraints="NO" id="4VJ-4v-J8b">
+                                <rect key="frame" x="113" y="448" width="120" height="120"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="014_gcr_l.png" translatesAutoresizingMaskIntoConstraints="NO" id="av8-8Z-7fr">
+                                <rect key="frame" x="232" y="448" width="120" height="120"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8s-Ln-Wwl">
+                                <rect key="frame" x="105" y="382" width="111" height="47"/>
+                                <fontDescription key="fontDescription" name="JK-Gothic-M" family="JK Gothic M" pointSize="25"/>
+                                <state key="normal" title="Memo">
+                                    <color key="titleColor" red="0.66666666669999997" green="0.50091352259999999" blue="0.25144907560000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XhJ-nI-hl4" kind="modal" id="XIJ-0Q-Cys"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clowd.gif" translatesAutoresizingMaskIntoConstraints="NO" id="MjY-Wt-dj7">
+                                <rect key="frame" x="-91" y="-4" width="618" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line.gif" translatesAutoresizingMaskIntoConstraints="NO" id="z4M-Ec-8B6">
+                                <rect key="frame" x="3" y="306" width="315" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line.gif" translatesAutoresizingMaskIntoConstraints="NO" id="MBs-d2-IYy">
+                                <rect key="frame" x="3" y="387" width="315" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCA-iq-Dab" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-261" y="366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GS1-Fq-ibv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XhJ-nI-hl4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="mS3-MP-zez"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b9X-OL-IfF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="8iE-b6-t4k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVW-nP-90d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="155" y="366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qEd-w5-u1Z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QxS-Fz-obL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hNW-A2-M2t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ada-D3-itN" kind="relationship" relationship="rootViewController" id="KY6-a5-9KH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6TE-yu-ig8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="1060"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="014_gcr_l.png" width="120" height="120"/>
+        <image name="clowd.gif" width="755" height="200"/>
+        <image name="line.gif" width="755" height="200"/>
+        <image name="post.gif" width="22" height="22"/>
+        <image name="名称未設定-13.gif" width="750" height="17"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+</document>
