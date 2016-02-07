@@ -10,5 +10,5 @@ import UIKit
 
 class RecipManager: NSObject {
     static let sharedInstance = RecipManager()
-    var memoArray: [Dictionary<String, String>] = []
+    var memoArray: [Dictionary<String, AnyObject>] = []
 }

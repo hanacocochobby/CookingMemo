@@ -20,6 +20,7 @@ class RecipeViewController: UIViewController {
     //①タイトルを保持するための変数を定義
     var recipetitle: String?
     var currentNumber: Int?
+    var imageData: NSData?
     
     
     override func viewDidLoad() {
@@ -31,12 +32,11 @@ class RecipeViewController: UIViewController {
         //②
         self.title = recipetitle
         
-        let imageData = NSUserDefaults.standardUserDefaults().objectForKey("image") as! NSData
-   
-        let image = UIImage(data: imageData)
-        imageFromCameraRoll.image = image
+//        let imageData = NSUserDefaults.standardUserDefaults().objectForKey("image") as! NSData
+            let image = UIImage(data: self.imageData!)
+            imageFromCameraRoll.image = image
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

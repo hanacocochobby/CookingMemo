@@ -18,11 +18,11 @@ class NewRecipViewController: UIViewController, UIImagePickerControllerDelegate,
     
     let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     let recipManager = RecipManager.sharedInstance
+    var selectImage =  NSData()
+    
     
         override func viewDidLoad() {
         super.viewDidLoad()
-
-            print( recipManager.memoArray)
         
             imageFromCameraRoll.contentMode = .ScaleAspectFit
     }
@@ -58,6 +58,7 @@ class NewRecipViewController: UIViewController, UIImagePickerControllerDelegate,
             imageFromCameraRoll.image = image
             
             let imageData = UIImagePNGRepresentation(image!)
+            self.selectImage = imageData!
             
             NSUserDefaults.standardUserDefaults().setObject(imageData, forKey: "image")
             NSUserDefaults.standardUserDefaults().synchronize()
@@ -76,7 +77,8 @@ class NewRecipViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func saveRecip(sender: AnyObject) {
-        let recip = ["title": titleTextField.text!, "content": titleTextView.text! , "recipe": recipe.text!] //レシピ１つの情報
+        
+        let recip = ["title": titleTextField.text!, "content": titleTextView.text! , "recipe": recipe.text!, "image": self.selectImage] //レシピ１つの情報
         
         recipManager.memoArray.insert(recip, atIndex: 0)
         saveData.setObject(recipManager.memoArray, forKey: "memos")

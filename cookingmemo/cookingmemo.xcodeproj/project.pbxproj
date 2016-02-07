@@ -20,16 +20,13 @@
 		3342AE011C140671006EC613 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342AE001C140671006EC613 /* RecipeViewController.swift */; };
 		3342AE031C14169A006EC613 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342AE021C14169A006EC613 /* EditViewController.swift */; };
 		3342AED91C424BEB006EC613 /* clowd.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3342AED81C424BEB006EC613 /* clowd.gif */; };
-		3369C5BF1BB7CB7900DD8634 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369C5BD1BB7CB7900DD8634 /* RecipeTableViewCell.swift */; };
-		3369C5C01BB7CB7900DD8634 /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3369C5BE1BB7CB7900DD8634 /* RecipeTableViewCell.xib */; };
 		33CBFB3F1BB7BD1E00EAA019 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CBFB3E1BB7BD1E00EAA019 /* AppDelegate.swift */; };
 		33CBFB411BB7BD1E00EAA019 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CBFB401BB7BD1E00EAA019 /* ViewController.swift */; };
 		33CBFB441BB7BD1E00EAA019 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CBFB421BB7BD1E00EAA019 /* Main.storyboard */; };
 		33CBFB461BB7BD1E00EAA019 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33CBFB451BB7BD1E00EAA019 /* Images.xcassets */; };
 		33CBFB491BB7BD1E00EAA019 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CBFB471BB7BD1E00EAA019 /* LaunchScreen.xib */; };
 		33CBFB551BB7BD1E00EAA019 /* cookingmemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CBFB541BB7BD1E00EAA019 /* cookingmemoTests.swift */; };
-		33D8DA6B1C64BDFE00D06CBD /* JKG-M_3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33D8DA6A1C64BDFE00D06CBD /* JKG-M_3.ttf */; };
-		33D8DA6D1C66EE3C00D06CBD /* li10-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 33D8DA6C1C66EE3C00D06CBD /* li10-1.png */; };
+		33CF29461C6732AC001392A4 /* 03スマートフォントUI.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33CF29451C6732AC001392A4 /* 03スマートフォントUI.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +53,6 @@
 		3342AE001C140671006EC613 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		3342AE021C14169A006EC613 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		3342AED81C424BEB006EC613 /* clowd.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = clowd.gif; path = ../../clowd.gif; sourceTree = "<group>"; };
-		3369C5BD1BB7CB7900DD8634 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
-		3369C5BE1BB7CB7900DD8634 /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 		33CBFB391BB7BD1E00EAA019 /* cookingmemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cookingmemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CBFB3D1BB7BD1E00EAA019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CBFB3E1BB7BD1E00EAA019 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,8 +63,7 @@
 		33CBFB4E1BB7BD1E00EAA019 /* cookingmemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cookingmemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CBFB531BB7BD1E00EAA019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CBFB541BB7BD1E00EAA019 /* cookingmemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookingmemoTests.swift; sourceTree = "<group>"; };
-		33D8DA6A1C64BDFE00D06CBD /* JKG-M_3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "JKG-M_3.ttf"; sourceTree = "<group>"; };
-		33D8DA6C1C66EE3C00D06CBD /* li10-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "li10-1.png"; sourceTree = "<group>"; };
+		33CF29451C6732AC001392A4 /* 03スマートフォントUI.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "03スマートフォントUI.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +111,7 @@
 		33CBFB3B1BB7BD1E00EAA019 /* cookingmemo */ = {
 			isa = PBXGroup;
 			children = (
-				33D8DA6A1C64BDFE00D06CBD /* JKG-M_3.ttf */,
+				33CF29451C6732AC001392A4 /* 03スマートフォントUI.otf */,
 				33CBFB3E1BB7BD1E00EAA019 /* AppDelegate.swift */,
 				33CBFB401BB7BD1E00EAA019 /* ViewController.swift */,
 				3342ADF81C018CDD006EC613 /* NewRecipViewController.swift */,
@@ -128,9 +122,6 @@
 				33CBFB451BB7BD1E00EAA019 /* Images.xcassets */,
 				33CBFB471BB7BD1E00EAA019 /* LaunchScreen.xib */,
 				33CBFB3C1BB7BD1E00EAA019 /* Supporting Files */,
-				3369C5BD1BB7CB7900DD8634 /* RecipeTableViewCell.swift */,
-				33D8DA6C1C66EE3C00D06CBD /* li10-1.png */,
-				3369C5BE1BB7CB7900DD8634 /* RecipeTableViewCell.xib */,
 				32DE95A11C67162A0079D73C /* RecipeCell.swift */,
 				32DE95A21C67162A0079D73C /* RecipeCell.xib */,
 			);
@@ -244,9 +235,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33CF29461C6732AC001392A4 /* 03スマートフォントUI.otf in Resources */,
 				32DE959C1C6714C80079D73C /* clowd.gif in Resources */,
 				32DE95A01C6714C80079D73C /* post@2x.gif in Resources */,
-				33D8DA6D1C66EE3C00D06CBD /* li10-1.png in Resources */,
 				32DE959B1C6714C80079D73C /* li10.png in Resources */,
 				33CBFB441BB7BD1E00EAA019 /* Main.storyboard in Resources */,
 				32DE959F1C6714C80079D73C /* line.gif in Resources */,
@@ -254,8 +245,6 @@
 				32DE959D1C6714C80079D73C /* 014_gcr_l.png in Resources */,
 				3342AED91C424BEB006EC613 /* clowd.gif in Resources */,
 				33CBFB461BB7BD1E00EAA019 /* Images.xcassets in Resources */,
-				3369C5C01BB7CB7900DD8634 /* RecipeTableViewCell.xib in Resources */,
-				33D8DA6B1C64BDFE00D06CBD /* JKG-M_3.ttf in Resources */,
 				32DE959E1C6714C80079D73C /* title.gif in Resources */,
 				32DE95A41C67162A0079D73C /* RecipeCell.xib in Resources */,
 			);
@@ -280,7 +269,6 @@
 				3342AE011C140671006EC613 /* RecipeViewController.swift in Sources */,
 				32DE95A31C67162A0079D73C /* RecipeCell.swift in Sources */,
 				33CBFB3F1BB7BD1E00EAA019 /* AppDelegate.swift in Sources */,
-				3369C5BF1BB7CB7900DD8634 /* RecipeTableViewCell.swift in Sources */,
 				3342ADFB1C01926A006EC613 /* RecipManager.swift in Sources */,
 				3342AE031C14169A006EC613 /* EditViewController.swift in Sources */,
 			);

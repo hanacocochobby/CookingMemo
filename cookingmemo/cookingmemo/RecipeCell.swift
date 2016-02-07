@@ -10,10 +10,13 @@ import UIKit
 
 class RecipeCell: UITableViewCell {
     @IBOutlet weak var RecipeTextField: UILabel!
-
+    @IBOutlet weak var imageFromCameraRoll: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+//        
+
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

@@ -45,12 +45,7 @@ class EditViewController: UIViewController {
     
     @IBAction func saveRecip(sender: AnyObject) {
         
-        
-        
         let recip: [String: String] = ["title": self.title!, "content": foodstuffTextView.text, "recipe": recipeTextVIew.text]//レシピ１つの情報
-        
-        print(recip)
-        print(recipManager.memoArray[currentNumber!])
         
         recipManager.memoArray[currentNumber!] = recip
         saveData.setObject(recipManager.memoArray, forKey: "memos")

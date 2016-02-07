@@ -13,9 +13,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     @IBOutlet var table: UITableView!    
     let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     let recipManager = RecipManager.sharedInstance
-    var memoArray = [Dictionary<String, String>]()
+    var memoArray = [Dictionary<String, AnyObject>]()
     
-    var currentRecipeDic: Dictionary<String, String>?
+    var currentRecipeDic: Dictionary<String, AnyObject>?
     var currentNumber: Int?
     
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
 //        [UINavigationBar appearance].barTintColor = [UIColor :0.000 green:0.549 blue:0.890 alpha:1.000];        
         UINavigationBar.appearance().barTintColor = UIColor(red: 223/255, green: 98/255, blue: 89/255, alpha: 1)
         
-        
+        table.separatorStyle = .None
         table.dataSource = self
         table.delegate = self
         
@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
         let recipenib  = UINib(nibName: "RecipeCell", bundle:nil)
         self.table.registerNib(recipenib, forCellReuseIdentifier:"RecipeCell")
         if saveData.objectForKey("memos") != nil {
-            recipManager.memoArray =  saveData.objectForKey("memos") as!  [Dictionary<String, String>]
+            recipManager.memoArray =  saveData.objectForKey("memos") as!  [Dictionary<String, AnyObject>]
         }
         print(memoArray.count)
     }
@@ -62,7 +62,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
                 let cell = tableView.dequeueReusableCellWithIdentifier("RecipeCell") as! RecipeCell
                 let recip = recipManager.memoArray[indexPath.row]
-                cell.RecipeTextField.text = recip["title"]
+                cell.RecipeTextField.text = recip["title"] as? String
+                 cell.imageView?.image = UIImage(data: (recip["image"] as? NSData)!)
 //                cell.RecipeTextView.text = recip["content"]
                 return cell
     }
@@ -81,10 +82,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showTweetVC"{
             let recipeViewController = segue.destinationViewController as! RecipeViewController
-            recipeViewController.foodstuff = self.currentRecipeDic!["content"]
-            recipeViewController.recipe = self.currentRecipeDic!["recipe"]
+            recipeViewController.foodstuff = self.currentRecipeDic!["content"] as? String
+            recipeViewController.recipe = self.currentRecipeDic!["recipe"] as? String
             recipeViewController.currentNumber = self.currentNumber
-            recipeViewController.recipetitle = self.currentRecipeDic!["title"]
+            recipeViewController.recipetitle = self.currentRecipeDic!["title"] as? String
+            
+            recipeViewController.imageData = self.currentRecipeDic!["image"] as? NSData
         }
     }
     
