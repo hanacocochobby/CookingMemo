@@ -32,8 +32,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
         let nib  = UINib(nibName: "PostTableViewCell", bundle:nil)
         self.table.registerNib(nib, forCellReuseIdentifier:"PostTableViewCell")
         
-        let recipenib  = UINib(nibName: "RecipeTableViewCell", bundle:nil)
-        self.table.registerNib(recipenib, forCellReuseIdentifier:"RecipeTableViewCell")
+        let recipenib  = UINib(nibName: "RecipeCell", bundle:nil)
+        self.table.registerNib(recipenib, forCellReuseIdentifier:"RecipeCell")
         if saveData.objectForKey("memos") != nil {
             recipManager.memoArray =  saveData.objectForKey("memos") as!  [Dictionary<String, String>]
         }
@@ -60,7 +60,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-                let cell = tableView.dequeueReusableCellWithIdentifier("RecipeTableViewCell") as! RecipeTableViewCell
+                let cell = tableView.dequeueReusableCellWithIdentifier("RecipeCell") as! RecipeCell
                 let recip = recipManager.memoArray[indexPath.row]
                 cell.RecipeTextField.text = recip["title"]
 //                cell.RecipeTextView.text = recip["content"]
