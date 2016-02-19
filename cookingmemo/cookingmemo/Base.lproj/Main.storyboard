@@ -143,13 +143,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="材料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfO-KG-URN">
-                                <rect key="frame" x="20" y="222" width="34" height="21"/>
+                                <rect key="frame" x="20" y="231" width="34" height="21"/>
                                 <fontDescription key="fontDescription" name="JK-Gothic-M" family="JK Gothic M" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cmO-S6-UFK">
-                                <rect key="frame" x="7" y="251" width="307" height="126"/>
+                                <rect key="frame" x="7" y="260" width="307" height="126"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.66666666669999997" green="0.50091352259999999" blue="0.25144907560000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -163,14 +163,21 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作り方" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2M-dH-8dc">
-                                <rect key="frame" x="20" y="379" width="51" height="21"/>
+                                <rect key="frame" x="20" y="384" width="51" height="21"/>
                                 <fontDescription key="fontDescription" name="JK-Gothic-M" family="JK Gothic M" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jLw-vj-9VM">
-                                <rect key="frame" x="40" y="86" width="240" height="128"/>
+                                <rect key="frame" x="40" y="79" width="240" height="128"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEM-gf-uee">
+                                <rect key="frame" x="40" y="79" width="240" height="128"/>
+                                <state key="normal" title="CameraRoll"/>
+                                <connections>
+                                    <action selector="pressCameraRoll:" destination="rwx-K6-PwG" eventType="touchUpInside" id="ruT-8c-xem"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -228,15 +235,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxE-aT-nJT">
-                                <rect key="frame" x="221" y="257" width="94" height="35"/>
-                                <state key="normal" title="CameraRoll">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressCameraRoll:" destination="ada-D3-itN" eventType="touchUpInside" id="I1S-pb-Bda"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FEx-8Z-1ju">
                                 <rect key="frame" x="33" y="126" width="240" height="128"/>
                             </imageView>
@@ -247,6 +245,15 @@
                                 <fontDescription key="fontDescription" name="JK-Gothic-M" family="JK Gothic M" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxE-aT-nJT">
+                                <rect key="frame" x="33" y="126" width="240" height="128"/>
+                                <state key="normal" title="CameraRoll">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressCameraRoll:" destination="ada-D3-itN" eventType="touchUpInside" id="I1S-pb-Bda"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>

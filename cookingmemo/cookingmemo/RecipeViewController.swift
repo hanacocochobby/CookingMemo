@@ -49,6 +49,7 @@ class RecipeViewController: UIViewController {
             editViewController.recipe = recipe
             editViewController.recipetitle = recipetitle
             editViewController.currentNumber = currentNumber
+            editViewController.selectImage = imageData
         }
     }
 

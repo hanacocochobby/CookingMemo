@@ -60,8 +60,8 @@ class NewRecipViewController: UIViewController, UIImagePickerControllerDelegate,
             let imageData = UIImagePNGRepresentation(image!)
             self.selectImage = imageData!
             
-            NSUserDefaults.standardUserDefaults().setObject(imageData, forKey: "image")
-            NSUserDefaults.standardUserDefaults().synchronize()
+//            NSUserDefaults.standardUserDefaults().setObject(imageData, forKey: "image")
+//            NSUserDefaults.standardUserDefaults().synchronize()
     }
         
         picker.dismissViewControllerAnimated(true, completion: nil)
@@ -72,25 +72,32 @@ class NewRecipViewController: UIViewController, UIImagePickerControllerDelegate,
     }
     
     @IBAction func pressCameraRoll(sender: AnyObject) {
-        
         pickImageFromLibrary()  //ライブラリから写真を選択する
     }
     
     @IBAction func saveRecip(sender: AnyObject) {
-        
-        let recip = ["title": titleTextField.text!, "content": titleTextView.text! , "recipe": recipe.text!, "image": self.selectImage] //レシピ１つの情報
-        
-        recipManager.memoArray.insert(recip, atIndex: 0)
-        saveData.setObject(recipManager.memoArray, forKey: "memos")
-        saveData.synchronize()
-        
-        let alert = UIAlertController(title: "保存", message: "メモの保存が完了しました", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-            self.dismissViewControllerAnimated(true, completion: nil)
-            return
-        }))
-        presentViewController(alert, animated: true, completion: nil)
+        if titleTextField.text == "" {
+            let alert = UIAlertController(title: "未入力項目があります", message: "タイトルを入力してください", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
+                self.dismissViewControllerAnimated(true, completion: nil)
+                return
+            }))
+            presentViewController(alert, animated: true, completion: nil)
+        }else {
+            let recip = ["title": titleTextField.text!, "content": titleTextView.text! , "recipe": recipe.text!, "image": self.selectImage] //レシピ１つの情報
+            
+            recipManager.memoArray.insert(recip, atIndex: 0)
+            saveData.setObject(recipManager.memoArray, forKey: "memos")
+            saveData.synchronize()
+            
+            let alert = UIAlertController(title: "保存", message: "メモの保存が完了しました", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
+                self.dismissViewControllerAnimated(true, completion: nil)
+                return
+            }))
+            presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     

@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate, UITextViewDelegate, UITableViewDelegate {
     
-    @IBOutlet var table: UITableView!    
+    @IBOutlet var table: UITableView!
     let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     let recipManager = RecipManager.sharedInstance
     var memoArray = [Dictionary<String, AnyObject>]()
@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
         super.viewDidLoad()
         //         Do any additional setup after loading the view, typically from a nib.
         
-//        [UINavigationBar appearance].barTintColor = [UIColor :0.000 green:0.549 blue:0.890 alpha:1.000];        
+        //        [UINavigationBar appearance].barTintColor = [UIColor :0.000 green:0.549 blue:0.890 alpha:1.000];
         UINavigationBar.appearance().barTintColor = UIColor(red: 223/255, green: 98/255, blue: 89/255, alpha: 1)
         
         table.separatorStyle = .None
@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-            table.reloadData()
+        table.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,32 +51,37 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-            return 1
+        return 1
     }
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-            return recipManager.memoArray.count
+        return recipManager.memoArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-                let cell = tableView.dequeueReusableCellWithIdentifier("RecipeCell") as! RecipeCell
-                let recip = recipManager.memoArray[indexPath.row]
-                cell.RecipeTextField.text = recip["title"] as? String
-                 cell.imageView?.image = UIImage(data: (recip["image"] as? NSData)!)
-//                cell.RecipeTextView.text = recip["content"]
-                return cell
+        let cell = tableView.dequeueReusableCellWithIdentifier("RecipeCell") as! RecipeCell
+        let recip = recipManager.memoArray[indexPath.row]
+        cell.RecipeTextField.text = recip["title"] as? String
+        if recip["image"]  != nil {
+            cell.imageView?.image = UIImage(data: (recip["image"] as? NSData)!)
+        }else {
+            // 違う画像とかも入れられる
+            
+        }
+        //                cell.RecipeTextView.text = recip["content"]
+        return cell
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100
     }
-
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let recipDic =  recipManager.memoArray[indexPath.row]
         self.currentRecipeDic = recipDic
         self.currentNumber = Int(indexPath.row)
-         performSegueWithIdentifier("showTweetVC", sender: self)
+        performSegueWithIdentifier("showTweetVC", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -91,7 +96,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
         }
     }
     
-
+    
     @IBAction func postMemo(){
         performSegueWithIdentifier("modalNewRecip", sender: self)
     }
