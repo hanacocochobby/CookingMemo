@@ -73,7 +73,12 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBAction func saveRecip(sender: AnyObject) {
         
         // TODO:  画像のNSDataをStringに変換するときにnilになってしまうので、完了ボタンを押すと落ちてしまう
-        let recip: [String: String] = ["title": self.title!, "content": foodstuffTextView.text, "recipe": recipeTextVIew.text, "image": String(data: self.selectImage!, encoding: NSUTF8StringEncoding)!]//レシピ１つの情報
+//        let recip = ["title": self.title!, "content": foodstuffTextView.text, "recipe": recipeTextVIew.text, "image": self.selectImage]//レシピ１つの情報
+        
+        let recip = ["title":  self.title!, "content":  foodstuffTextView.text, "recipe":  recipeTextVIew.text, "image":  self.selectImage] //レシピ１つの情報
+        
+        
+//                let recip: [String: AbyObject] = ["title": self.title!, "content": foodstuffTextView.text, "recipe": recipeTextVIew.text, "image": String(data: self.selectImage!, encoding: NSUTF8StringEncoding)!]//レシピ１つの情報
         
         recipManager.memoArray[currentNumber!] = recip
         saveData.setObject(recipManager.memoArray, forKey: "memos")
