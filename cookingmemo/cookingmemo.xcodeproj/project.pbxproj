@@ -8,11 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		32DE959B1C6714C80079D73C /* li10.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DE95951C6714C80079D73C /* li10.png */; };
-		32DE959C1C6714C80079D73C /* clowd.gif in Resources */ = {isa = PBXBuildFile; fileRef = 32DE95961C6714C80079D73C /* clowd.gif */; };
-		32DE959D1C6714C80079D73C /* 014_gcr_l.png in Resources */ = {isa = PBXBuildFile; fileRef = 32DE95971C6714C80079D73C /* 014_gcr_l.png */; };
-		32DE959E1C6714C80079D73C /* title.gif in Resources */ = {isa = PBXBuildFile; fileRef = 32DE95981C6714C80079D73C /* title.gif */; };
-		32DE959F1C6714C80079D73C /* line.gif in Resources */ = {isa = PBXBuildFile; fileRef = 32DE95991C6714C80079D73C /* line.gif */; };
-		32DE95A01C6714C80079D73C /* post@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 32DE959A1C6714C80079D73C /* post@2x.gif */; };
 		32DE95A31C67162A0079D73C /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE95A11C67162A0079D73C /* RecipeCell.swift */; };
 		32DE95A41C67162A0079D73C /* RecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32DE95A21C67162A0079D73C /* RecipeCell.xib */; };
 		3342ADF91C018CDD006EC613 /* NewRecipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3342ADF81C018CDD006EC613 /* NewRecipViewController.swift */; };
@@ -27,6 +22,10 @@
 		33CBFB491BB7BD1E00EAA019 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CBFB471BB7BD1E00EAA019 /* LaunchScreen.xib */; };
 		33CBFB551BB7BD1E00EAA019 /* cookingmemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CBFB541BB7BD1E00EAA019 /* cookingmemoTests.swift */; };
 		33CF29461C6732AC001392A4 /* 03スマートフォントUI.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33CF29451C6732AC001392A4 /* 03スマートフォントUI.otf */; };
+		33CF294A1C7992C1001392A4 /* Memo-button.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33CF29491C7992C1001392A4 /* Memo-button.gif */; };
+		33CF294C1C799429001392A4 /* memo_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CF294B1C799429001392A4 /* memo_back.png */; };
+		33CF29501C79CCAA001392A4 /* memo_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CF294F1C79CCAA001392A4 /* memo_camera.png */; };
+		33CF29561C8B2F24001392A4 /* memo_post@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CF29551C8B2F24001392A4 /* memo_post@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +40,6 @@
 
 /* Begin PBXFileReference section */
 		32DE95951C6714C80079D73C /* li10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = li10.png; sourceTree = "<group>"; };
-		32DE95961C6714C80079D73C /* clowd.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = clowd.gif; sourceTree = "<group>"; };
-		32DE95971C6714C80079D73C /* 014_gcr_l.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 014_gcr_l.png; sourceTree = "<group>"; };
-		32DE95981C6714C80079D73C /* title.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = title.gif; sourceTree = "<group>"; };
-		32DE95991C6714C80079D73C /* line.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = line.gif; sourceTree = "<group>"; };
-		32DE959A1C6714C80079D73C /* post@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "post@2x.gif"; sourceTree = "<group>"; };
 		32DE95A11C67162A0079D73C /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		32DE95A21C67162A0079D73C /* RecipeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecipeCell.xib; sourceTree = "<group>"; };
 		3342ADF81C018CDD006EC613 /* NewRecipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRecipViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +58,10 @@
 		33CBFB531BB7BD1E00EAA019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CBFB541BB7BD1E00EAA019 /* cookingmemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookingmemoTests.swift; sourceTree = "<group>"; };
 		33CF29451C6732AC001392A4 /* 03スマートフォントUI.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "03スマートフォントUI.otf"; sourceTree = "<group>"; };
+		33CF29491C7992C1001392A4 /* Memo-button.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Memo-button.gif"; sourceTree = "<group>"; };
+		33CF294B1C799429001392A4 /* memo_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memo_back.png; sourceTree = "<group>"; };
+		33CF294F1C79CCAA001392A4 /* memo_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memo_camera.png; sourceTree = "<group>"; };
+		33CF29551C8B2F24001392A4 /* memo_post@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "memo_post@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +89,10 @@
 				33CBFB511BB7BD1E00EAA019 /* cookingmemoTests */,
 				33CBFB3A1BB7BD1E00EAA019 /* Products */,
 				32DE95951C6714C80079D73C /* li10.png */,
-				32DE95961C6714C80079D73C /* clowd.gif */,
-				32DE95971C6714C80079D73C /* 014_gcr_l.png */,
-				32DE95981C6714C80079D73C /* title.gif */,
-				32DE95991C6714C80079D73C /* line.gif */,
-				32DE959A1C6714C80079D73C /* post@2x.gif */,
+				33CF29491C7992C1001392A4 /* Memo-button.gif */,
+				33CF294B1C799429001392A4 /* memo_back.png */,
+				33CF294F1C79CCAA001392A4 /* memo_camera.png */,
+				33CF29551C8B2F24001392A4 /* memo_post@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -236,16 +233,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				33CF29461C6732AC001392A4 /* 03スマートフォントUI.otf in Resources */,
-				32DE959C1C6714C80079D73C /* clowd.gif in Resources */,
-				32DE95A01C6714C80079D73C /* post@2x.gif in Resources */,
+				33CF294A1C7992C1001392A4 /* Memo-button.gif in Resources */,
+				33CF294C1C799429001392A4 /* memo_back.png in Resources */,
 				32DE959B1C6714C80079D73C /* li10.png in Resources */,
+				33CF29561C8B2F24001392A4 /* memo_post@2x.png in Resources */,
+				33CF29501C79CCAA001392A4 /* memo_camera.png in Resources */,
 				33CBFB441BB7BD1E00EAA019 /* Main.storyboard in Resources */,
-				32DE959F1C6714C80079D73C /* line.gif in Resources */,
 				33CBFB491BB7BD1E00EAA019 /* LaunchScreen.xib in Resources */,
-				32DE959D1C6714C80079D73C /* 014_gcr_l.png in Resources */,
 				3342AED91C424BEB006EC613 /* clowd.gif in Resources */,
 				33CBFB461BB7BD1E00EAA019 /* Images.xcassets in Resources */,
-				32DE959E1C6714C80079D73C /* title.gif in Resources */,
 				32DE95A41C67162A0079D73C /* RecipeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

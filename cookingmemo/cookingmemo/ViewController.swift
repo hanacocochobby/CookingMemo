@@ -64,7 +64,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
         let recip = recipManager.memoArray[indexPath.row]
         cell.RecipeTextField.text = recip["title"] as? String
         if recip["image"]  != nil {
-            cell.imageView?.image = UIImage(data: (recip["image"] as? NSData)!)
+            cell.imageFromCameraRoll.image = UIImage(data: (recip["image"] as? NSData)!)
         }else {
             // 違う画像とかも入れられる
             
@@ -74,7 +74,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
+        return 104
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -84,6 +84,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
         performSegueWithIdentifier("showTweetVC", sender: self)
     }
     
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showTweetVC"{
             let recipeViewController = segue.destinationViewController as! RecipeViewController
@@ -91,10 +93,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITextFieldDelega
             recipeViewController.recipe = self.currentRecipeDic!["recipe"] as? String
             recipeViewController.currentNumber = self.currentNumber
             recipeViewController.recipetitle = self.currentRecipeDic!["title"] as? String
-            
             recipeViewController.imageData = self.currentRecipeDic!["image"] as? NSData
+            
+            
         }
     }
+    
     
     
     @IBAction func postMemo(){

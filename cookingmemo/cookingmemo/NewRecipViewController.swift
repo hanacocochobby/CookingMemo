@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewRecipViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class NewRecipViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate{
     
     @IBOutlet weak var recipe: UITextView!
     
@@ -23,8 +23,12 @@ class NewRecipViewController: UIViewController, UIImagePickerControllerDelegate,
     
         override func viewDidLoad() {
         super.viewDidLoad()
-        
+            titleTextView.delegate = self
+            recipe.delegate = self
             imageFromCameraRoll.contentMode = .ScaleAspectFit
+            
+            let gesture = UITapGestureRecognizer(target: self, action: "tapGesture")
+            self.view.addGestureRecognizer(gesture)
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,7 +60,7 @@ class NewRecipViewController: UIViewController, UIImagePickerControllerDelegate,
             //didFinishPickingMediaWithInfo通して渡された画像情報をUIImageにCastする
             //それを宣言済みのimageViewへ入れる
             imageFromCameraRoll.image = image
-            
+
             let imageData = UIImagePNGRepresentation(image!)
             self.selectImage = imageData!
             
@@ -90,6 +94,7 @@ class NewRecipViewController: UIViewController, UIImagePickerControllerDelegate,
             saveData.setObject(recipManager.memoArray, forKey: "memos")
             saveData.synchronize()
             
+            
             let alert = UIAlertController(title: "保存", message: "メモの保存が完了しました", preferredStyle: UIAlertControllerStyle.Alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
@@ -99,8 +104,32 @@ class NewRecipViewController: UIViewController, UIImagePickerControllerDelegate,
             presentViewController(alert, animated: true, completion: nil)
         }
     }
+
+    
+    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+        print("piyo")
+        UIView.animateWithDuration(0.5) { () -> Void in
+            self.view.frame.origin.y = -200
+        }
+
+        return true
+    }
+    
+    func textViewShouldEndEditing(textView: UITextView) -> Bool {
+        UIView.animateWithDuration(0.5) { () -> Void in
+            self.view.frame.origin.y = 0
+        }
+        return true
+    }
+    
+    func textViewDidEndEditing(textView: UITextView) {
+        self.view.frame.origin.y = 0
+    }
     
     
+    func tapGesture() {
+        self.view.endEditing(true)
+    }
     /*
     // MARK: - Navigation
 

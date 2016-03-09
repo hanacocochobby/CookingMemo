@@ -15,7 +15,10 @@ class RecipeCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        
+        imageFromCameraRoll.clipsToBounds = true
+        imageFromCameraRoll.frame.size = CGSize(width: 78, height: 78)
+        imageFromCameraRoll.contentMode = UIViewContentMode.ScaleAspectFill
+        print("====")
 
     }
 

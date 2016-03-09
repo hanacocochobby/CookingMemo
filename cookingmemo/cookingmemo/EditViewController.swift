@@ -75,7 +75,7 @@ class EditViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // TODO:  画像のNSDataをStringに変換するときにnilになってしまうので、完了ボタンを押すと落ちてしまう
 //        let recip = ["title": self.title!, "content": foodstuffTextView.text, "recipe": recipeTextVIew.text, "image": self.selectImage]//レシピ１つの情報
         
-        let recip = ["title":  self.title!, "content":  foodstuffTextView.text, "recipe":  recipeTextVIew.text, "image":  self.selectImage] //レシピ１つの情報
+        let recip = ["title":  self.title!, "content":  foodstuffTextView.text, "recipe":  recipeTextVIew.text, "image":  self.selectImage!]
         
         
 //                let recip: [String: AbyObject] = ["title": self.title!, "content": foodstuffTextView.text, "recipe": recipeTextVIew.text, "image": String(data: self.selectImage!, encoding: NSUTF8StringEncoding)!]//レシピ１つの情報

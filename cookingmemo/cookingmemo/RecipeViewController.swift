@@ -14,6 +14,7 @@ class RecipeViewController: UIViewController {
     @IBOutlet weak var recipeTextVIew: UITextView!
     
     @IBOutlet weak var imageFromCameraRoll: UIImageView!
+    @IBOutlet weak var memoCamera: UIImageView!
     
     var foodstuff: String?
     var recipe: String?
@@ -29,12 +30,20 @@ class RecipeViewController: UIViewController {
         foodstuffTextView.text = foodstuff
         recipeTextVIew.text = recipe
         
+        
+        
         //②
         self.title = recipetitle
         
 //        let imageData = NSUserDefaults.standardUserDefaults().objectForKey("image") as! NSData
+//            print(self.imageData!)
             let image = UIImage(data: self.imageData!)
-            imageFromCameraRoll.image = image
+         imageFromCameraRoll.image = image
+        if image != nil{
+           memoCamera.hidden = true
+        }else{
+            memoCamera.hidden = false
+        }
     }
     
     override func didReceiveMemoryWarning() {
